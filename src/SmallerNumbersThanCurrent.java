@@ -1,18 +1,21 @@
-public class SmallerNumbersThanCurrent extends Solution {
+/**
+ * iterate through an array and determine how many values in the array are less than the current value,
+ * then store the amount of numbers less than the current value into to a new array.
+ */
 
-    public static void main(String[] args) {
-        int[] nums = {3, 4, 6, 2, 3, 2, 6};
-        System.out.print("Numbers array: ");
-        for (int i : nums)
-            System.out.print(i + " ");
-        SmallerNumbersThanCurrent test = new SmallerNumbersThanCurrent();
-        test.start();
-        int[] newNums = test.smallerNumbersThanCurrent(nums);
-        test.stop();
-        System.out.print("\nCorresponding amount greater than: ");
-        for (int i : newNums)
-            System.out.print(i + " ");
-        System.out.println("\nTime taken for this test is: " + test.timeTaken());
+public class SmallerNumbersThanCurrent {
+
+    public SmallerNumbersThanCurrent(int[] num){
+        System.out.print("Numbers in array:");
+        for(int nums : num){
+            System.out.print(" " + nums);
+        }
+        System.out.println();
+        int[] newNum = smallerNumbersThanCurrent(num);
+        System.out.print("Numbers in new array:");
+        for(int nums : newNum){
+            System.out.print(" " + nums);
+        }
     }
 
     public int[] smallerNumbersThanCurrent(int[] nums) {
